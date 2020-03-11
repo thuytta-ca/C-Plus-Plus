@@ -1,8 +1,10 @@
 //roll a die from 1 to 6
 
+
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <cstdlib> // srand()
+#include <ctime> // time()
+
 using namespace std;
 
 int main()
