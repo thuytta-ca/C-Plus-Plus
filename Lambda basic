@@ -1,0 +1,45 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+//------------------------------------------------------------//
+    
+    int i = 5, j = 6;
+    auto MultiLambda1 = [i,j](int x, int y) -> int {
+        return (x * y) + i + j;
+    };
+    cout << "Lambda use [i,j]: " << MultiLambda1(2,4) <<"\n";
+    // out => Lambda use [i]: 19
+
+//------------------------------------------------------------//
+
+    auto MultiLambda2 = [=](int x, int y) -> int {
+        return (x * y) + i + j;
+    };
+    cout << "Lambda use [=]: " << MultiLambda2(2,4) <<"\n";
+    // out => Lambda use [=]: 19 
+    
+//------------------------------------------------------------//
+
+    auto MultiLambda3 = [&i,&j](int x, int y) -> int {
+        int i = 7, j = 8;
+        return (x * y) + i + j;
+    };
+    cout << "Lambda use [&i,&j]: " << MultiLambda3(2,4) <<"\n";
+    // out => Lambda use [&i,&j:23 
+    
+//------------------------------------------------------------//
+
+    auto MultiLambda4 = [&](int x, int y) -> int {
+        int i = 7, j = 8;
+        return (x * y) + i + j;
+    };
+    cout << "Lambda use [&]: " << MultiLambda4(2,4) <<"\n";
+    // out => Lambda use [&]: 23 
+//------------------------------------------------------------//
+
+  return 0;
+}
