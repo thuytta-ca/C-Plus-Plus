@@ -7,15 +7,21 @@ using namespace std;
 
 int main() {
     
-    vector<int> vec(10,1);    
+    // vector <datatype> nameOfVector
+    vector<int> vec(10,1);  // vector size = 10, element[1] = 1, element[2] = 1, element[3] = 1 ...
     cout<<"Vector's size: "<<vec.size()<<"\n";
 
     for ( unsigned i = 0; i < vec.size(); i++)
     {
-        /* code */
+      
         cout<< vec[i] <<" ";    
     }
     cout<<"\n";
     
   return 0;
 }
+
+  /* out */ 
+  Vector's size: 10
+  1 1 1 1 1 1 1 1 1 1
+  
