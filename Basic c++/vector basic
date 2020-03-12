@@ -1,0 +1,21 @@
+//vector
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    
+    vector<int> vec(10,1);    
+    cout<<"Vector's size: "<<vec.size()<<"\n";
+
+    for ( unsigned i = 0; i < vec.size(); i++)
+    {
+        /* code */
+        cout<< vec[i] <<" ";    
+    }
+    cout<<"\n";
+    
+  return 0;
+}
