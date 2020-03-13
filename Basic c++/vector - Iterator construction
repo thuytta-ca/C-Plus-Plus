@@ -1,0 +1,43 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+    //first one
+    vector<int> vec1(10,0);
+    unsigned i;
+    cout<<"Vector 1 size: "<<vec1.size()<<"\n";
+
+    for(i = 0; i < vec1.size(); i++)
+    {
+        vec1[i]= i+1;
+    }
+
+    for(i = 0; i < vec1.size(); i++)
+    {
+        cout << vec1[i] <<" ";
+    }
+    cout<<"\n";
+
+    //second one
+    vector<int> vec2(vec1.begin(), vec1.begin()+5);
+    cout<<"Vector 2 size: "<<vec2.size()<<"\n";
+
+    for(i = 0; i < vec2.size(); i++)
+    {
+        cout << vec2[i] <<" ";
+    }
+    cout<<"\n";
+
+  return 0;
+}
+
+/** out **/
+
+Vector 1 size: 10
+1 2 3 4 5 6 7 8 9 10
+Vector 2 size: 5
+1 2 3 4 5
