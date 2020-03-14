@@ -1,0 +1,42 @@
+// vector iterator construction - initialization
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+    int a1[] = {1,2,3,4,5,6,7,8,9,10}; // array
+    unsigned i; // never negative
+
+    //first one
+    vector<int> vec1(a1,a1+10);
+    cout<<"Vector 1 size: "<<vec1.size()<<"\n";
+
+    for(i = 0; i < vec1.size(); i++)
+    {
+        cout << vec1[i] <<" ";
+    }
+    cout<<"\n";
+
+    //second one
+    vector<int> vec2(a1+5, a1+10);
+    cout<<"Vector 2 size: "<<vec2.size()<<"\n";
+
+    for(i = 0; i < vec2.size(); i++)
+    {
+        cout << vec2[i] <<" ";
+    }
+    cout<<"\n";
+
+  return 0;
+}
+
+/** out **/
+
+Vector 1 size: 10
+1 2 3 4 5 6 7 8 9 10
+Vector 2 size: 5
+6 7 8 9 10
