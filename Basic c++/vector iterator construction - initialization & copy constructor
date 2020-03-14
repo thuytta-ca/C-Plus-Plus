@@ -1,4 +1,4 @@
-// vector iterator construction - initialization
+// vector iterator construction - initialization & copy constructor
 
 #include <iostream>
 #include <vector>
