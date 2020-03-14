@@ -1,0 +1,28 @@
+// vector dealing with object (class)
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class A{
+    int numberIn;
+public:
+    A(int numberOut): numberIn(numberOut) {}    
+
+};
+
+int main() {
+
+    vector<A> vec;
+    
+    vec.push_back(5);
+    vec.push_back(4);
+    
+    cout << "vector size: " << vec.size() << "\n";
+  
+  return 0;
+}
+
+/** out **/
+vector size: 2
