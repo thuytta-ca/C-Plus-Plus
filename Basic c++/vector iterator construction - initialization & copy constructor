@@ -21,7 +21,9 @@ int main() {
     cout<<"\n";
 
     //second one
-    vector<int> vec2(a1+5, a1+10); // copy constructor  ==>  vector<int> vec2(vec1);
+    vector<int> vec2(a1+5, a1+10); // vector iterator construction - initialization
+    vector<int> vec2(vec1);        // vector iterator construction - copy constructor
+    
     cout<<"Vector 2 size: "<<vec2.size()<<"\n";
 
     for(i = 0; i < vec2.size(); i++)
@@ -33,9 +35,16 @@ int main() {
   return 0;
 }
 
-/** out **/
+/** out vector iterator construction - initialization **/
 
 Vector 1 size: 10
 1 2 3 4 5 6 7 8 9 10
 Vector 2 size: 5
 6 7 8 9 10
+
+/** out vector iterator construction - copy constructor**/
+
+Vector 1 size: 10
+1 2 3 4 5 6 7 8 9 10
+Vector 2 size: 10
+1 2 3 4 5 6 7 8 9 10
