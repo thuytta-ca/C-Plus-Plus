@@ -1,6 +1,5 @@
 // vector iterator construction - initialization
 
-
 #include <iostream>
 #include <vector>
 
