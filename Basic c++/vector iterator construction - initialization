@@ -21,7 +21,7 @@ int main() {
     cout<<"\n";
 
     //second one
-    vector<int> vec2(a1+5, a1+10);
+    vector<int> vec2(a1+5, a1+10); // copy constructor  ==>  vector<int> vec2(vec1);
     cout<<"Vector 2 size: "<<vec2.size()<<"\n";
 
     for(i = 0; i < vec2.size(); i++)
