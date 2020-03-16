@@ -1,0 +1,23 @@
+//deque basic
+#include <deque>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    deque <int> de(10,1); // 10 element with value is 1
+    cout<<"deque's size = "<<de.size()<<"\n";
+    
+    for(unsigned i = 0; i < de.size(); i++)
+    {
+        cout<<de[i] <<" ";
+    }
+    cout<<"\n";
+    return 0;
+}
+
+/** out **/
+
+deque's size = 10
+1 1 1 1 1 1 1 1 1 1
