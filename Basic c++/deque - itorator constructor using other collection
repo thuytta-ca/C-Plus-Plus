@@ -1,0 +1,47 @@
+//deque - itorator constructor using other collection
+
+#include <deque>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector <int> vec(10,0);
+    unsigned i;
+
+    //vector
+
+    cout<<"vector's size: "<<vec.size()<<"\n";
+    for(i = 0; i< vec.size(); ++i)
+    {
+        vec[i] = i+1;
+    }
+    for (i = 0 ; i < vec.size() ; ++i)
+    {
+        cout<<vec[i]<<" ";
+    }
+    cout<<"\n";
+
+    //deque
+    
+    deque <int> d1(vec.begin() + 5, vec.begin() + 10);
+    cout<<"deque 1's size: "<<d1.size()<<"\n";
+
+    for( i = 0 ; i<d1.size(); i++)
+    {
+        cout<<d1[i]<<" ";
+    }
+    cout<<"\n";
+
+    return 0;
+}
+
+/** Out **/
+
+vector's size: 10
+1 2 3 4 5 6 7 8 9 10
+deque's size: 5
+6 7 8 9 10
+
