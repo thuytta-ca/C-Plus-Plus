@@ -27,6 +27,8 @@ int main()
     //deque
     
     deque <int> d1(vec.begin() + 5, vec.begin() + 10);
+    deque <int> d2(d1); // deque copy construction
+    
     cout<<"deque 1's size: "<<d1.size()<<"\n";
 
     for( i = 0 ; i<d1.size(); i++)
