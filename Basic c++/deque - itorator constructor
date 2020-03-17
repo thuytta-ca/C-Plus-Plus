@@ -1,0 +1,40 @@
+// deque - itorator constructor
+
+#include <deque>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+
+    //first one
+
+    deque <int> d1(arr, arr+10);
+    cout<<"deque 1's size: "<<d1.size()<<"\n";
+
+    for(unsigned i = 0 ; i<d1.size(); i++)
+    {
+        cout<<d1[i]<<" ";
+    }
+    cout<<"\n";
+
+    // second one
+    deque <int> d2(arr+5, arr+10);
+    cout<<"deque 2's size: "<<d2.size()<<"\n";
+    
+    for(unsigned i = 0 ; i<d2.size(); i++)
+    {
+        cout<<d2[i]<<" ";
+    }
+    cout<<"\n";
+    return 0;
+}
+
+/** Out **/
+
+deque 1's size: 10
+1 2 3 4 5 6 7 8 9 10
+deque 2's size: 5
+6 7 8 9 10
