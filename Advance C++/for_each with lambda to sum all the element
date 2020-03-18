@@ -1,0 +1,33 @@
+// for_each with lambda to sum all the element
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    vector <int> vec = {1,2,3,4,5,6,7};
+    int total = 0;
+
+    cout<<"for_each loop with lambda expression to sum all of the vector element"<<"\n";    
+    for_each(
+                vec.begin(), vec.end(), 
+                [&](int x) { 
+                    total += x; 
+                }
+            );
+
+    cout<<"sum is: "<<total<<"\n";
+    return 0;
+}
+
+/** Out **/
+
+for_each loop with lambda expression to sum all of the vector element
+sum is: 28
+
+https://www.youtube.com/watch?v=uk0Ytomv0wY
+13:20
+
